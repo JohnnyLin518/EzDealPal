@@ -40,6 +40,7 @@ function Main(props){
     return (
         <div className = "main">
             <Switch>
+                <Route path = "/" exact component={ Home} />
                 <Route path = "/home" component = { Home } />
                 <Route path = "/login" render = { showLogin } />
                 <Route path = "/register" component =  { Register } />
