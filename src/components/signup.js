@@ -109,7 +109,7 @@ class Signup extends React.Component {
                     >
                         <Form.Item
                             name="email"
-                            label = "email"
+                            label = "Email"
                             rules={[
                                 {
                                     type: 'email',
@@ -162,7 +162,7 @@ class Signup extends React.Component {
 
                         <Form.Item
                             name="name"
-                            label = "name"
+                            label = "Name"
                             rules={[
                                 {
                                     required: true,
@@ -193,7 +193,7 @@ class Signup extends React.Component {
 
                         <Form.Item
                             name="zip_code"
-                            label="zip"
+                            label="Zip"
                             rules={[
                                 {
                                     required: true,
