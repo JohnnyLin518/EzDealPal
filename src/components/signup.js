@@ -1,47 +1,13 @@
 import React from 'react';
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import {
     Button,
-    Col,
     Form,
     Input,
-    Row,
     Select,
     message,
     Modal
 } from 'antd';
 import { signup } from "../utils";
-
-const formItemLayout = {
-    labelCol: {
-        xs: {
-            span: 24,
-        },
-        sm: {
-            span: 8,
-        },
-    },
-    wrapperCol: {
-        xs: {
-            span: 24,
-        },
-        sm: {
-            span: 16,
-        },
-    },
-};
-const tailFormItemLayout = {
-    wrapperCol: {
-        xs: {
-            span: 24,
-            offset: 0,
-        },
-        sm: {
-            span: 16,
-            offset: 8,
-        },
-    },
-};
 
 const { Option } = Select;
 
