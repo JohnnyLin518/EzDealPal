@@ -81,7 +81,7 @@ export const postItem = (data) => {
         },
         body: JSON.stringify(data),
     }).then((response) => {
-        if (response.status <00 || response.status >= 300) {
+        if (response.status <200 || response.status >= 300) {
             throw Error("Fail to post item");
         }
     });
@@ -95,7 +95,7 @@ export const editItem =(ProductID) => {
         },
         body: JSON.stringify(data),
     }).then((response) => {
-        if (response.status <00 || response.status >= 300) {
+        if (response.status <200 || response.status >= 300) {
             throw Error("Fail to edit item");
         }
     });
