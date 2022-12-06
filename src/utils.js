@@ -31,7 +31,7 @@ export const login = (credential) => {
     });
 };
 
-export const sighup = (data) => {
+export const signup = (data) => {
     const signupUrl = "/signup";
     return fetch(signupUrl, {
         method: "POST",
