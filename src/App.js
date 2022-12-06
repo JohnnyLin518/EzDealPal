@@ -8,25 +8,24 @@ import Login from "./components/Login";
 import Postitem from "./components/Postitem";
 import Sellerview from "./components/Sellerview";
 import Signup from "./components/Signup";
-import Logo from "./assets/images/logo.svg"
+import Logo from "./assets/images/logo.svg";
 
-import { LogoutOutlined } from '@ant-design/icons';
+import { LogoutOutlined } from "@ant-design/icons";
 import { Layout } from "antd";
 
-const { Header, Content} = Layout;
+const { Header, Content } = Layout;
 
 function App() {
-
   const [authed, setAuthed] = useState(false);
 
   return (
-    <Layout style = {{ height: "100vh" }}>
-        <Header style = {{ backgroundColor: "lightblue" }}>
-          <div className = "header">
-            <img src = { Logo } className = "App-logo" alt = "logo" height = "64px"/>
-          </div>
-        </Header>
-        {/*<Content
+    <Layout style={{ height: "100vh" }}>
+      <Header style={{ backgroundColor: "lightblue" }}>
+        <div className="header">
+          <img src={Logo} className="App-logo" alt="logo" height="64px" />
+        </div>
+      </Header>
+      {/*<Content
           style={{
             padding: "50px",
             maxHeight: "calc(100% - 64px)",
@@ -43,3 +42,5 @@ function App() {
         </Content>*/}
     </Layout>
   );
+}
+export default App;
