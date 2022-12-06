@@ -73,7 +73,7 @@ export const getItemDetails = (ProductID) => {
     });
 };
 
-export const PostItem = (data) => { 
+export const postItem = (data) => { 
     return fetch("/PostItem", {
         method: "POST",
         headers: {
@@ -87,7 +87,7 @@ export const PostItem = (data) => {
     });
 };
 
-export const EditItem =(ProductID) => {
+export const editItem =(ProductID) => {
     return fetch(`/EditItem/${ProductID}`, {
         method: "POST",
         headers: {
