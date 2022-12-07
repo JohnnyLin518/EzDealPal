@@ -1,19 +1,21 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const PrivateLink = ({ to, children }) => {
-  const history = useHistory();
-
+  const navigate = useNavigate();
+  const isLoggedIn = false;
   const handleClick = (event) => {
-    if (localStorage.getItem("isLoggedIn") === "true") {
-      history.push(to);
+    if (isLoggedIn) {
+      navigate(to);
     } else {
       event.preventDefault();
       const result = window.confirm(
         "You need to login first. Do you want to go to the login page?"
       );
       if (result) {
-        history.push("/login");
+        navigate("/login");
+      } else {
+        return;
       }
     }
   };

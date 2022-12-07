@@ -1,0 +1,16 @@
+
+
+.common__section {
+    background: linear-gradient(rgba(111, 129, 153, 0.6),rgba(165, 181, 186, 0.6));
+    background-size: contain;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+}
+
+.common__section h1{
+    color:#fff;
+    font-weight: 600;
+}

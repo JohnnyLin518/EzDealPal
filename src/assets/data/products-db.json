@@ -1,0 +1,626 @@
+{
+    "post": [
+        {
+            "id": "01",
+            "productName": "Stone and Beam Westview ",
+            "user_id": "user1@gmail.com",
+            "imgUrl": "../images/double-sofa-01.png",
+            "category": "home",
+            "price": 193,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11",
+            "reviews": [
+              {
+                "rating": 4.7,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.5
+          },
+        
+          {
+            "id": "02",
+            "productName": "Rivet Bigelow Modern ",
+            "user_id": "user1@gmail.com",
+            "imgUrl": "../images/double-sofa-02.png",
+            "category": "home",
+            "price": 253,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11",
+            "reviews": [
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.7
+          },
+        
+          {
+            "id": "03",
+            "productName": "Amazon Brand Modern Sofa",
+            "user_id": "user1@gmail.com",
+            "imgUrl": "../images/double-sofa-03.png",
+            "category": "home",
+            "price": 173,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11",
+            "reviews": [
+              {
+                "rating": 4.6,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.7
+          },
+          {
+            "id": "26",
+            "productName": "Rivet Bigelow Modern ",
+            "user_id": "user2@gmail.com",
+            "imgUrl": "../images/double-sofa-02.png",
+            "category": "home",
+            "price": 253,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11",
+            "reviews": [
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.7
+          },
+          {
+            "id": "04",
+            "productName": "Fllufy Sheep Sofa",
+            "user_id": "user2@gmail.com",
+            "imgUrl": "../images/single-sofa-01.jpg",
+            "category": "home",
+            "price": 163,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11",
+            "reviews": [
+              {
+                "rating": 4.6,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.7
+          },
+        
+          {
+            "id": "05",
+            "productName": "Faux Velvet Sofa",
+            "user_id": "user2@gmail.com",
+            "imgUrl": "../images/single-sofa-02.jpg",
+            "category": "home",
+            "price": 163,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11",
+            "reviews": [
+              {
+                "rating": 4.6,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.7
+          },
+        
+          {
+            "id": "06",
+            "productName": "Fllufy Sheep Sofa",
+            "user_id": "user2@gmail.com",
+            "imgUrl": "../images/single-sofa-03.jpg",
+            "category": "home",
+            "price": 163,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11",
+            "reviews": [
+              {
+                "rating": 4.6,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.7
+          },
+          {
+            "id": "07",
+            "productName": "Sakarias Armchair",
+            "user_id": "user2@gmail.com",
+            "imgUrl": "../images/arm-chair-01.jpg",
+            "category": "home",
+            "price": 99,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.6,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.7
+          },
+        
+          {
+            "id": "27",
+            "productName": "Modern Arm Sofa",
+            "user_id": "user2@gmail.com",
+            "imgUrl": "../images/single-sofa-04.png",
+            "category": "home",
+            "price": 173,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.6,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.7
+          },
+        
+          {
+            "id": "08",
+            "productName": "Baltsar Chair",
+            "user_id": "user2@gmail.com",
+            "imgUrl": "../images/arm-chair-02.jpg",
+            "category": "home",
+            "price": 89,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.6,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.7
+          },
+        
+          {
+            "id": "09",
+            "productName": "Helmar Chair",
+            "user_id": "user2@gmail.com",
+            "imgUrl": "../images/arm-chair-03.jpg",
+            "category": "home",
+            "price": 112,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.6,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.7
+          },
+        
+          {
+            "id": "10",
+            "productName": "Apple iPhone 12 Pro",
+            "user_id": "user2@gmail.com",
+            "imgUrl": "../images/phone-01.jpg",
+            "category": "electronic",
+            "price": 799,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.8
+          },
+          {
+            "id": "25",
+            "productName": "Sakarias Armchair",
+            "user_id": "user2@gmail.com",
+            "imgUrl": "../images/arm-chair-01.jpg",
+            "category": "home",
+            "price": 99,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.6,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.7
+          },
+          {
+            "id": "11",
+            "productName": "Apple iPhone 12 Max",
+            "user_id": "user1@gmail.com",
+            "imgUrl": "../images/phone-02.jpg",
+            "category": "electronic",
+            "price": 799,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.8
+          },
+        
+          {
+            "id": "12",
+            "productName": "Realme 8",
+            "user_id": "user3@gmail.com",
+            "imgUrl": "../images/phone-03.png",
+            "category": "electronic",
+            "price": 599,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.8
+          },
+        
+          {
+            "id": "13",
+            "productName": "One Plus Nord",
+            "user_id": "user3@gmail.com",
+            "imgUrl": "../images/phone-04.jpg",
+            "category": "electronic",
+            "price": 799,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.8
+          },
+        
+          {
+            "id": "14",
+            "productName": "Apple iPhone 13 Pro",
+            "user_id": "user3@gmail.com",
+            "imgUrl": "../images/phone-05.jpg",
+            "category": "electronic",
+            "price": 899,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.8
+          },
+        
+          {
+            "id": "15",
+            "productName": "Samsung Galaxy S22",
+            "user_id": "user3@gmail.com",
+            "imgUrl": "../images/phone-06.jpg",
+            "category": "electronic",
+            "price": 699,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.8
+          },
+        
+          {
+            "id": "16",
+            "productName": "Rolex Watch",
+            "user_id": "user3@gmail.com",
+            "imgUrl": "../images/watch-01.jpg",
+            "category": "jewelry",
+            "price": 299,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.8
+          },
+        
+          {
+            "id": "17",
+            "productName": "Timex Easy Reader Watch",
+            "user_id": "user4@gmail.com",
+            "imgUrl": "../images/watch-02.jpg",
+            "category": "jewelry",
+            "price": 299,
+            "zipcode": "10012",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11",
+            "reviews": [
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.8
+          },
+        
+          {
+            "id": "18",
+            "productName": "Rolex Watch",
+            "user_id": "user4@gmail.com",
+            "imgUrl": "../images/watch-03.jpg",
+            "category": "jewelry",
+            "price": 299,
+            "zipcode": "10012",
+            "condition": 4,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.8
+          },
+        
+          {
+            "id": "19",
+            "productName": "Apple Watch",
+            "user_id": "user4@gmail.com",
+            "imgUrl": "../images/watch-04.jpg",
+            "category": "jewelry",
+            "price": 399,
+            "zipcode": "02215",
+            "condition": 3,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.8
+          },
+        
+          {
+            "id": "20",
+            "productName": "Beat Studio Wireless",
+            "user_id":"user4@gmail.com",
+            "imgUrl": "../images/wireless-01.png",
+            "category": "electronic",
+            "price": 199,
+            "zipcode": "02215",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.8
+          },
+        
+          {
+            "id": "22",
+            "productName": "Beat EP Headphones",
+            "user_id":"user4@gmail.com",
+            "imgUrl": "../images/wireless-03.png",
+            "category": "electronic",
+            "price": 199,
+            "zipcode": "02215",
+            "condition": 5,
+            "shortDesc":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+            "product_description":
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+            "created_date":"2022/11/11","reviews": [
+              {
+                "rating": 4.8,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              },
+              {
+                "rating": 4.9,
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              }
+            ],
+            "avgRating": 4.8
+          }
+    ]
+}

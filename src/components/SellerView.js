@@ -1,5 +1,8 @@
 import React from "react";
 import { Pagination } from "antd";
+import { Container, Row, Col } from "reactstrap";
+
+import ProductsList from "./UI/ProductsList";
 
 const SellerView = () => {
   return (
