@@ -17,6 +17,7 @@ const ItemDetails = () => {
  // var productName = "holder";
  const [productName, setProductName] = useState([]);
  const [description, setDescription] = useState([]);
+ const [userEmail, setUserEmail] = useState([]);
  const id = useMemo(async () => {
   // const path = location.pathname;
   // const arr = path.split("/");
@@ -25,14 +26,14 @@ const ItemDetails = () => {
  },[]);
 
  useEffect(() => {
-  getItemDetails(8)
+  getItemDetails(10)
       .then(function (data) {
         const items = data;
         setProductName(items.productName)
         setDescription(items.productDescription)
-        // console.log(items.productName)
+        setUserEmail(items.userId)
+        console.log(items)
         // console.log(items.productDescription)
-        return [items.productName, items.productDescription];
       })
       .catch((err) => {
       })
@@ -41,13 +42,12 @@ const ItemDetails = () => {
  }, []);
 
  console.log("aaaa   " + productName);
-
-
+ console.log("aaaaaaaa   " + userEmail);
 
  const [isModalOpen, setIsModalOpen] = useState(false);
 
  const showModal = () => {
-  const token = localStorage.getItem('token')
+  // const token = localStorage.getItem('token')
 
   setIsModalOpen(true);
  };
@@ -63,7 +63,7 @@ const ItemDetails = () => {
       <div className="ItemDetails-Carousel">
        <Carousel autoplay>
         <div>
-         <h3 style={contentStyle}>1</h3>
+             <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt="computer" width="500" height="300"/>
         </div>
         {/*<div>*/}
         {/*  <h3 style={contentStyle}>2</h3>*/}
@@ -97,9 +97,8 @@ const ItemDetails = () => {
           onOk={handleOk}
           onCancel={handleCancel}
       >
-       <Descriptions title="Details" column={1}>
-        <Descriptions.Item label="Connect information">10086</Descriptions.Item>
-        <Descriptions.Item label="Address">CA</Descriptions.Item>
+       <Descriptions title="" column={1}>
+        <Descriptions.Item label="Connect information">{userEmail}</Descriptions.Item>
        </Descriptions>
       </Modal>
      </div>

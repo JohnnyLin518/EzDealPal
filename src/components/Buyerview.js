@@ -6,7 +6,7 @@ import ProductsList from "./UI/ProductsList";
 import { message, Pagination } from "antd";
 
 import { getProducts } from "../utils";
-import products from "../assets/data/products";
+// import products from "../assets/data/products";
 import "../styles/buyer-view.css";
 import ZipcodeForm from "./UI/ZipcodeForm";
 const BuyerView = () => {

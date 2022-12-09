@@ -71,8 +71,8 @@ export const getSellerView = (UserID) => {
 
 export const getItemDetails = (ProductID) => {
   ///product/${ProductID}
-  const url = "http://localhost:8080/product/7/";
-  return fetch(`/product/${ProductID}/`, {
+  const url = `http://localhost:8080/product/${ProductID}/`;
+  return fetch(url, {
     headers: {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
@@ -86,18 +86,18 @@ export const getItemDetails = (ProductID) => {
 };
 
 export const PostProduct = (data) => {
-  // return fetch("/PostItem", {
-  //     method: "POST",
-  //     headers: {
-  //         "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(data),
-  // }).then((response) => {
-  //     if (response.status <200 || response.status >= 300) {
-  //         throw Error("Fail to post item");
-  //     }
-  // });
-  return "Success: " + data.Name;
+  return fetch("/PostItem", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify(data),
+  }).then((response) => {
+      if (response.status <200 || response.status >= 300) {
+          throw Error("Fail to post item");
+      }
+  });
 };
 
 export const EditProduct = (data) => {
