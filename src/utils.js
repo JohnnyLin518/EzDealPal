@@ -60,14 +60,31 @@ export const getSellerView = (UserID) => {
   });
 };
 
+// export const getItemDetails = (ProductID) => {
+//   return fetch(`/itemdetails/${ProductID}`).then((response) => {
+//     if (response.status < 200 || response.status >= 300) {
+//       throw Error("Fail to get ItemDetail");
+//     }
+//     return response.json();
+//   });
+// };
+
 export const getItemDetails = (ProductID) => {
-  return fetch(`/itemdetails/${ProductID}`).then((response) => {
-    if (response.status < 200 || response.status >= 300) {
+  ///product/${ProductID}
+  const url = 'http://localhost:8080/product/7/'
+  return fetch(`http://localhost:8080/product/${ProductID}/`, {
+    headers:{
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    }
+  }).then((response) => {
+    if(response.status <200 || response.status >= 300) {
       throw Error("Fail to get ItemDetail");
     }
     return response.json();
   });
 };
+
 
 export const postItem = (data) => {
   return fetch("/additem", {
