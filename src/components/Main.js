@@ -11,9 +11,9 @@ import Add_item from "./Additem";
 
 function Main(props){
 
-    const {isLoggedIn, handleLoggedIn} = props;
+    // const {isLoggedIn, handleLoggedIn} = props;
     //测试
-    //const [isLoggedIn, handleLoggedIn] = useState(true); 
+    const [isLoggedIn, handleLoggedIn] = useState(true);
 
     const showLogin = () => {
         return isLoggedIn ? 

@@ -86,31 +86,33 @@ export const getItemDetails = (ProductID) => {
 };
 
 
-export const postItem = (data) => {
-  return fetch("/additem", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  }).then((response) => {
-    if (response.status < 200 || response.status >= 300) {
-      throw Error("Fail to post item");
-    }
-  });
+export const PostProduct = (data) => {
+  // return fetch("/PostItem", {
+  //     method: "POST",
+  //     headers: {
+  //         "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(data),
+  // }).then((response) => {
+  //     if (response.status <200 || response.status >= 300) {
+  //         throw Error("Fail to post item");
+  //     }
+  // });
+  return "Success: " + data.Name;
 };
 
-// export const editItem = (ProductID) => {
-//   return fetch(`/EditItem/${ProductID}`, {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(data),
-//   }).then((response) => {
-//     if (response.status < 200 || response.status >= 300) {
-//       throw Error("Fail to edit item");
-//     }
-//   });
-// };
+export const EditProduct =(data) => {
+  return "Success"
+  // return fetch(`/EditItem/${ProductID}`, {
+  //     method: "POST",
+  //     headers: {
+  //         "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(data),
+  // }).then((response) => {
+  //     if (response.status <200 || response.status >= 300) {
+  //         throw Error("Fail to edit item");
+  //     }
+  // });
+};
   
