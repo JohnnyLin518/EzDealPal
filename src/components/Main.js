@@ -49,11 +49,11 @@ function Main(props){
         <div className = "main">
             <Switch>
                 <Route path = "/" exact component = { Buyer_view } />
-                <Route path = "/buyerview" component = { Buyer_view } />
+                <Route path = "/search" component = { Buyer_view } />
                 <Route path = "/login" render = { showLogin } />
                 <Route path = "/signup" render = { showSignup } />
                 <Route path = "/itemdetails" render = { showItemdetails} />
-                <Route path = "/sellerview" render = { showSellerview } />
+                <Route path = "/sell" render = { showSellerview } />
                 <Route path = "/edititem" render = { showEdititem } />
                 <Route path = "/additem" render = { showAdditem } />
             </Switch>
