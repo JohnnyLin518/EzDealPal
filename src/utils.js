@@ -1,43 +1,43 @@
 export const login = (credential) => {
-    const loginUrl = `/login?username=${credential.username}&password=${credential.password}`;
-  
-    return fetch(loginUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-    }).then((response) => {
-      if (response.status < 200 || response.status >= 300) {
-        throw Error("Fail to log in");
-      }
-    });
-  };
+  const loginUrl = `/login?username=${credential.username}&password=${credential.password}`;
 
-  export const signup = (data) => {
-    const signupUrl = "/signup";
-  
-    return fetch(signupUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((response) => {
-      if (response.status < 200 || response.status >= 300) {
-        throw Error("Fail to sign up");
-      }
-    });
-  };
+  return fetch(loginUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    credentials: "include",
+  }).then((response) => {
+    if (response.status < 200 || response.status >= 300) {
+      throw Error("Fail to log in");
+    }
+  });
+};
 
+export const signup = (data) => {
+  const signupUrl = "/signup";
 
-  export const getProducts = (zipcode, distance) => {
+  return fetch(signupUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  }).then((response) => {
+    if (response.status < 200 || response.status >= 300) {
+      throw Error("Fail to sign up");
+    }
+  });
+};
+
+export const getProducts = (zipcode, distance) => {
+  //http://localhost:8081/EzDealPal_war_exploded/search?zip_code=30304&distance=10
   return fetch(`/search?zip_code=${zipcode}&distance=${distance}`).then(
     (response) => {
       if (response.status < 200 || response.status >= 300) {
         throw Error("Fail to getproducts");
       }
-      return response.json();
+      return response;
     }
   );
 };
@@ -71,20 +71,19 @@ export const getSellerView = (UserID) => {
 
 export const getItemDetails = (ProductID) => {
   ///product/${ProductID}
-  const url = 'http://localhost:8080/product/7/'
-  return fetch(`http://localhost:8080/product/${ProductID}/`, {
-    headers:{
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
-    }
+  const url = "http://localhost:8080/product/7/";
+  return fetch(`/product/${ProductID}/`, {
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },
   }).then((response) => {
-    if(response.status <200 || response.status >= 300) {
+    if (response.status < 200 || response.status >= 300) {
       throw Error("Fail to get ItemDetail");
     }
     return response.json();
   });
 };
-
 
 export const PostProduct = (data) => {
   // return fetch("/PostItem", {
@@ -101,8 +100,8 @@ export const PostProduct = (data) => {
   return "Success: " + data.Name;
 };
 
-export const EditProduct =(data) => {
-  return "Success"
+export const EditProduct = (data) => {
+  return "Success";
   // return fetch(`/EditItem/${ProductID}`, {
   //     method: "POST",
   //     headers: {
@@ -115,4 +114,3 @@ export const EditProduct =(data) => {
   //     }
   // });
 };
-  
