@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useMemo, useEffect} from "react";
 import {Button, Carousel, Descriptions, Modal, Row} from "antd";
 import "../styles/ItemDetails.css";
 import {getItemDetails} from "../utils"
@@ -14,23 +14,33 @@ const contentStyle = {
 
 const ItemDetails = () => {
  const location = useLocation();
- let productName = "holder";
- // const id = useMemo(() => {
- const path = location.pathname;
- const arr = path.split("/");
- //     return arr[2];
- // },[]);
- let list = getItemDetails(8).then(function (data) {
-  const items = data;
-  console.log(items.productName)
-  console.log(items.productDescription)
-  return [items.productName, items.productDescription];
- });
- console.log("aa  " + list.then(function (data){
-  console.log(data[0])
- }))
- productName = list[0]
+ // var productName = "holder";
+ const [productName, setProductName] = useState([]);
+ const [description, setDescription] = useState([]);
+ const id = useMemo(async () => {
+  // const path = location.pathname;
+  // const arr = path.split("/");
+  // return arr[2];
+  // await myFunction();
+ },[]);
 
+ useEffect(() => {
+  getItemDetails(8)
+      .then(function (data) {
+        const items = data;
+        setProductName(items.productName)
+        setDescription(items.productDescription)
+        // console.log(items.productName)
+        // console.log(items.productDescription)
+        return [items.productName, items.productDescription];
+      })
+      .catch((err) => {
+      })
+      .finally(() => {
+      });
+ }, []);
+
+ console.log("aaaa   " + productName);
 
 
 
@@ -71,8 +81,8 @@ const ItemDetails = () => {
       {/*</div>*/}
       <Row className="ItemDetails-Descriptions">
        <Descriptions title="Details" column={1}>
-        <Descriptions.Item id="name" label="Name">{productName}</Descriptions.Item>
-        <Descriptions.Item label="Description">Great!</Descriptions.Item>
+        <Descriptions.Item label="Name">{productName}</Descriptions.Item>
+        <Descriptions.Item label="Description">{description}</Descriptions.Item>
        </Descriptions>
       </Row>
       <Row className="ItemDetails-Descriptions">
