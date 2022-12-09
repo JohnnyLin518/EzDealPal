@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {Button, Carousel, Descriptions, Modal, Row} from "antd";
-import "./style/ItemDetails.scss";
+import "../styles/ItemDetails.css";
 import {getItemDetails} from "../utils"
-import {useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const contentStyle = {
  height: "160px",
