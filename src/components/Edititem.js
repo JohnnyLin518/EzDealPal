@@ -3,6 +3,8 @@ import {Button, Form, Input, message} from "antd";
 import { Upload,Radio } from "antd";
 import ImgCrop from "antd-img-crop";
 import { EditProduct } from "../utils";
+import '../styles/postItem.css'
+
 
 const EditItem = () => {
  const [fileList, setFileList] = React.useState([
