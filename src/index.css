@@ -1,0 +1,11 @@
+@import "~antd/dist/reset.css";
+@import "./styles/Topbar.css";
+@import "./styles/Login.css";
+
+* {
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+}

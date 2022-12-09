@@ -1,0 +1,19 @@
+.App-logo {
+  height: 50px;  
+}
+  
+.logout {
+  font-size: 30px;
+  position: relative;
+  left: 47%;
+  top:10px;
+  color: gray;
+}
+
+.Loginhref {
+  font-size: 15px;
+  position: relative;
+  left: 35%;
+  color: green;
+  font-family: 'Courier New', Courier, monospace;
+}
