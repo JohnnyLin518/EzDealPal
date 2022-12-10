@@ -6,70 +6,102 @@ import ProductsList from "./UI/ProductsList";
 import { message, Pagination } from "antd";
 
 import { getProducts, search } from "../utils";
-import response from "../assets/response.json";
+// import response from "../assets/response.json";
 import "../styles/buyer-view.css";
 import ZipcodeForm from "./UI/ZipcodeForm";
 
 const BuyerView = () => {
-  const [productsData, setProductsData] = useState(response);
+  const [originalProductsData, setOriginalProductsData] = useState([]);
+  const [productsData, setProductsData] = useState([]);
   //   const initProducts = [];
   //   initProducts = productsData;
   //   console.log("init", initProducts);
-  const [zipcode, setZipcode] = useState(0);
-  const [distance, setDistance] = useState(0);
+  const [zipcode, setZipcode] = useState(30304);
+  const [distance, setDistance] = useState(5);
+  const [loading, setLoading] = useState(false);
 
   const searchRef = useRef();
   const zipcodeRef = useRef();
-  //   useEffect(() => {
-  //     getProducts(zipcode, distance)
-  //       .then((productsData) => {
-  //         setProductsData(productsData);
-  //       })
-  //       .catch((err) => {
-  //         message.error(err.message);
-  //       });
-  //   }, [zipcode, distance]);
+
+  useEffect(() => {
+    console.log(zipcode, distance);
+    setLoading(true);
+    getProducts(zipcode, distance)
+      .then((productsData) => {
+        setOriginalProductsData(productsData);
+        setProductsData(productsData);
+      })
+      .catch((err) => {
+        message.error(err.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [zipcode, distance]);
 
   const handleSelect = (e) => {
-    // console.log(e.target.value);
-    // setDistance(e.target.value);
-    setProductsData(response);
+    // setProductsData(response);  // Remove this line
+
+    setLoading(true); // Set loading state to true
+
+    // Get the distance value from the select input
     const value = e.target.value;
-    const selectedProducts = productsData.filter(
-      (item) => value >= item.distance
-    );
-    setProductsData(selectedProducts);
+    console.log(zipcode, value);
+    setDistance(value);
+    // Call the getProducts function with the new distance value
+    // getProducts(zipcode, value)
+    //   .then((productsData) => {
+    //     setProductsData(productsData); // Update the productsData state with the new list of products
+    //   })
+    //   .catch((err) => {
+    //     message.error(err.message);
+    //   })
+    //   .finally(() => {
+    //     setLoading(false); // Set loading state to false when finished
+    //   });
   };
 
   const handleZipcode = () => {
-    setProductsData(response);
+    setLoading(true);
     const value = zipcodeRef.current.value;
     // setZipcode(value);
     // console.log(value);
-    const products = productsData.filter((item) => item.zipcode === value);
-    setProductsData(products);
+    console.log(value, distance);
+    setZipcode(value);
+    // getProducts(value, distance)
+    //   .then((productsData) => {
+    //     setProductsData(productsData); // Update the productsData state with the new list of products
+    //   })
+    //   .catch((err) => {
+    //     message.error(err.message);
+    //   })
+    //   .finally(() => {
+    //     setLoading(false); // Set loading state to false when finished
+    //   });
   };
 
   const handleSearch = () => {
     const searchTerm = searchRef.current.value;
     if (!searchTerm) {
-      setProductsData(response);
+      setProductsData(originalProductsData);
       return;
     }
 
     console.log(searchTerm);
-    const searchedProducts = productsData.filter(
+    console.log(originalProductsData);
+    const searchedProducts = originalProductsData.filter(
       (item) =>
         item.productName.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.productKeywords.toLowerCase().includes(searchTerm.toLowerCase())
     );
+    console.log(searchedProducts);
     setProductsData(searchedProducts);
   };
 
   const handleReset = (e) => {
     const searchTerm = e.target.value;
     if (!searchTerm) {
-      setProductsData(response);
+      setProductsData(originalProductsData);
       return;
     }
   };
@@ -94,7 +126,7 @@ const BuyerView = () => {
                   <option value={20}>20km</option>
                   <option value={30}>30km</option>
                   <option value={40}>40km</option>
-                  <option value={1000}> &gt;50km</option>
+                  <option value={10000}> &gt;50km</option>
                 </select>
               </div>
             </Col>
@@ -119,7 +151,9 @@ const BuyerView = () => {
       <section className="pt-0">
         <Container>
           <Row>
-            {productsData.length === 0 ? (
+            {loading === true ? (
+              <h1 className="text-center fs-4">Pleas wait...</h1>
+            ) : productsData.length === 0 ? (
               <h1 className="text-center fs-4">No items are found!</h1>
             ) : (
               <ProductsList data={productsData} />
@@ -128,68 +162,6 @@ const BuyerView = () => {
         </Container>
       </section>
     </>
-    /*<section>
-        <Container>
-          <Row>
-            <Col lg="3" md="3">
-              <div className="zipcode__input">
-                <input type="text" placeholder="Please input your zipcode" />
-              </div>
-            </Col>
-            <Col lg="3" md="3">
-              <div className="filter__widget">
-                <select>
-                  <option>Distance</option>
-                  <option value="5"> 5km </option>
-                  <option value="10">10km</option>
-                  <option value="20">20km</option>
-                  <option value="30">30km</option>
-                  <option value="40">40km</option>
-                  <option value="50">50km</option>
-
-                  <option value="2000"> &lt 30km</option>
-                </select>
-              </div>
-            </Col>
-            <Col lg="6" md="6">
-              <div className="search__box">
-                <input
-                  type="text"
-                  placeholder="Search...."
-                  onChange={handleSearch}
-                />
-                <span>
-                  <i class="ri-search-line"></i>
-                </span>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-      <section>
-        <Container>
-          <Row>
-            {productsData.length === 0 ? (
-              <h1 className="text-center fs-4">No items are found!</h1>
-            ) : (
-              <ProductsList data={productsData} />
-            )}
-          </Row>
-        </Container>
-      </section> */
-
-    /* <section>
-        <Row>
-          <Pagination
-            total={85}
-            showTotal={(total, range) =>
-              `${range[0]}-${range[1]} of ${total} items`
-            }
-            defaultPageSize={20}
-            defaultCurrent={1}
-          />
-        </Row>
-      </section> */
   );
 };
 

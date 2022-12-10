@@ -32,14 +32,17 @@ export const signup = (data) => {
 
 export const getProducts = (zipcode, distance) => {
   //http://localhost:8081/EzDealPal_war_exploded/search?zip_code=30304&distance=10
-  return fetch(`/search?zip_code=${zipcode}&distance=${distance}`).then(
-    (response) => {
-      if (response.status < 200 || response.status >= 300) {
-        throw Error("Fail to getproducts");
-      }
-      return response;
-    }
+  console.log(
+    `http://localhost:8081/EzDealPal_war_exploded/search?zip_code=${zipcode}&distance=${distance}`
   );
+  return fetch(
+    `http://localhost:8081/EzDealPal_war_exploded/search?zip_code=${zipcode}&distance=${distance}`
+  ).then((response) => {
+    if (response.status < 200 || response.status >= 300) {
+      throw Error("Fail to getproducts");
+    }
+    return response.json();
+  });
 };
 
 export const getAllProducts = () => {
@@ -87,16 +90,16 @@ export const getItemDetails = (ProductID) => {
 
 export const PostProduct = (data) => {
   return fetch("http://localhost:8080/addProduct/", {
-      method: "POST",
-      headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-      },
-      body: JSON.stringify(data),
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },
+    body: JSON.stringify(data),
   }).then((response) => {
-      if (response.status <200 || response.status >= 300) {
-          throw Error("Fail to post item");
-      }
+    if (response.status < 200 || response.status >= 300) {
+      throw Error("Fail to post item");
+    }
   });
 };
 
