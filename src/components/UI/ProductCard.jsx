@@ -25,10 +25,10 @@ const ProductCard = ({ item }) => {
               {item.productName}
             </PrivateLink>
           </h3>
-          <span>{item.status}</span>
+          <span>{item.productKeywords}</span>
         </div>
         <div className="product__card-bottom d-flex align-items-center justify-content-between p-2">
-          <span className="price">${item.zipcode}</span>
+          <span className="">{item.userId}</span>
           <span className="publicDate ">{item.publicDate}</span>
         </div>
       </div>
