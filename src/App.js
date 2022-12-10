@@ -2,7 +2,7 @@ import { useState } from "react";
 import Main from "./components/Main";
 import Topbar from "./components/Topbar";
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   const logout = () => {
     console.log("log out");

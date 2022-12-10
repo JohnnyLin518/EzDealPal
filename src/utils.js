@@ -1,5 +1,5 @@
 export const login = (credential) => {
-  const loginUrl = `/login?username=${credential.username}&password=${credential.password}`;
+  const loginUrl = `http://localhost:8081/EzDealPal_war_exploded/login?username=${credential.username}&password=${credential.password}`;
 
   return fetch(loginUrl, {
     method: "POST",
@@ -15,7 +15,7 @@ export const login = (credential) => {
 };
 
 export const signup = (data) => {
-  const signupUrl = "/signup";
+  const signupUrl = "http://localhost:8081/EzDealPal_war_exploded/signup";
 
   return fetch(signupUrl, {
     method: "POST",
@@ -55,7 +55,9 @@ export const getAllProducts = () => {
 };
 
 export const getSellerView = (UserID) => {
-  return fetch(`/sell/${UserID}`).then((response) => {
+  return fetch(
+    `http://localhost:8081/EzDealPal_war_exploded/sell/${UserID}`
+  ).then((response) => {
     if (response.status < 200 || response.status >= 300) {
       throw Error("Fail to get SellerView");
     }
@@ -74,7 +76,7 @@ export const getSellerView = (UserID) => {
 
 export const getItemDetails = (ProductID) => {
   ///product/${ProductID}
-  const url = `http://localhost:8080/product/${ProductID}/`;
+  const url = `http://localhost:8081/EzDealPal_war_exploded/product/${ProductID}/`;
   return fetch(url, {
     headers: {
       "Content-Type": "application/json",
@@ -89,7 +91,7 @@ export const getItemDetails = (ProductID) => {
 };
 
 export const PostProduct = (data) => {
-  return fetch("http://localhost:8080/addProduct/", {
+  return fetch("http://localhost:8081/EzDealPal_war_exploded/addProduct/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

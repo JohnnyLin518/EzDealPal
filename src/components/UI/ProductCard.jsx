@@ -15,15 +15,15 @@ const ProductCard = ({ item }) => {
     <Col lg="3" md="4">
       <div className="product__item">
         <div className="product__img">
-          <PrivateLink to={`/itemDetails/${item.productID}`}>
+          <Link to={`/itemDetails/${item.productID}`}>
             <motion.img whileHover={{ scale: 0.9 }} src={item.url} alt="" />
-          </PrivateLink>
+          </Link>
         </div>
         <div className="p-2 product__info">
           <h3 className="product__name">
-            <PrivateLink to={`/itemDetails/${item.productID}`}>
+            <Link to={`/itemDetails/${item.productID}`}>
               {item.productName}
-            </PrivateLink>
+            </Link>
           </h3>
           <span>{item.productKeywords}</span>
         </div>

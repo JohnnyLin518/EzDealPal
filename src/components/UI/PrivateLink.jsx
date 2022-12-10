@@ -3,9 +3,9 @@ import { Link, useHistory } from "react-router-dom";
 
 const PrivateLink = ({ to, children }) => {
   const history = useHistory();
-  const isLoggedIn = false;
+  const isLoggedIn = true;
   const handleClick = (event) => {
-    if (isLoggedIn) {
+    if (true) {
       history.push(to);
     } else {
       event.preventDefault();
