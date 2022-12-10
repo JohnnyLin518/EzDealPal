@@ -14,7 +14,8 @@ const PostItem = () => {
    status: "done",
    url: "https://img0.baidu.com/it/u=2107908400,1400895861&fm=253&fmt=auto&app=138&f=JPEG?w=609&h=442",
   },
- ]); // 上传图片list
+ ]);
+ // 上传图片list
  //上传文件改变时的回调
  const onChange = ({ fileList: newFileList }) => {
   setFileList(newFileList);
@@ -37,11 +38,13 @@ const PostItem = () => {
 
  // 表单提交
  const onFinish = (values) => {
+  values.status = "Available";
+  values.publicDate = "2022/12/9";
   console.log("Success:",  values);
 
   //获取表单数据 values
   //调用新增
-  console.log(PostProduct(values))
+  PostProduct(values);
   message.success(`Successfully add your product`)
  };
 
@@ -59,7 +62,7 @@ const PostItem = () => {
       >
        <Form.Item
            label="Name"
-           name="Name"
+           name="productName"
            rules={[{ required: true, message: "Please input your Name!" }]}
        >
         <Input />
@@ -67,20 +70,28 @@ const PostItem = () => {
 
        <Form.Item
            label="Description"
-           name="descriptor"
+           name="productDescription"
            rules={[{ required: true, message: "Please input your descriptor!" }]}
        >
         <Input />
        </Form.Item>
 
        <Form.Item
+           label="Keywords"
+           name="productKeywords"
+           // rules={[{ required: true, message: "Please input your descriptor!" }]}
+       >
+        <Input />
+       </Form.Item>
+
+       <Form.Item
            label="Upload Pict"
-           name="descriptor"
-           rules={[{ required: true, message: "Please input your descriptor!" }]}
+           name="pic"
+           // rules={[{ required: true, message: "Please input your descriptor!" }]}
        >
         <ImgCrop rotate>
          <Upload
-             action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+             // action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
              listType="picture-card"
              fileList={fileList}
              onChange={onChange}
@@ -92,8 +103,28 @@ const PostItem = () => {
        </Form.Item>
 
        <Form.Item
-           label="Connect Inf"
-           name="Information"
+           label="Pict's url"
+           name="url"
+           // rules={[
+           //  { required: true, message: "Please input your Information!" },
+           // ]}
+       >
+        <Input />
+       </Form.Item>
+
+       {/*<Form.Item*/}
+       {/*    label="Connect Inf"*/}
+       {/*    name="userId"*/}
+       {/*    rules={[*/}
+       {/*     { required: true, message: "Please input your Information!" },*/}
+       {/*    ]}*/}
+       {/*>*/}
+       {/* <Input />*/}
+       {/*</Form.Item>*/}
+
+       <Form.Item
+           label="Zipcode"
+           name="zipcode"
            rules={[
             { required: true, message: "Please input your Information!" },
            ]}

@@ -86,7 +86,7 @@ export const getItemDetails = (ProductID) => {
 };
 
 export const PostProduct = (data) => {
-  return fetch("/PostItem", {
+  return fetch("http://localhost:8080/addProduct/", {
       method: "POST",
       headers: {
           "Content-Type": "application/json",
