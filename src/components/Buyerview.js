@@ -1,50 +1,78 @@
 import React from "react";
 import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Container, Row, Col } from "reactstrap";
 import ProductsList from "./UI/ProductsList";
 import { message, Pagination } from "antd";
 
-import { getProducts } from "../utils";
-// import products from "../assets/data/products";
+import { getProducts, search } from "../utils";
+import response from "../assets/response.json";
 import "../styles/buyer-view.css";
 import ZipcodeForm from "./UI/ZipcodeForm";
+
 const BuyerView = () => {
-  const [productsData, setProductsData] = useState([]);
+  const [productsData, setProductsData] = useState(response);
+  //   const initProducts = [];
+  //   initProducts = productsData;
+  //   console.log("init", initProducts);
+  const [zipcode, setZipcode] = useState(0);
+  const [distance, setDistance] = useState(0);
 
-  const [loading, setLoading] = useState(false);
-  const [zipcode, setZipcode] = useState("30304");
-  const [distance, setDistance] = useState("10");
+  const searchRef = useRef();
+  const zipcodeRef = useRef();
+  //   useEffect(() => {
+  //     getProducts(zipcode, distance)
+  //       .then((productsData) => {
+  //         setProductsData(productsData);
+  //       })
+  //       .catch((err) => {
+  //         message.error(err.message);
+  //       });
+  //   }, [zipcode, distance]);
 
-  useEffect(
-    (zipcode, distance) => {
-      getProducts(zipcode, distance)
-        .then((productsData) => {
-          setProductsData(productsData);
-        })
-        .catch((err) => {
-          message.error(err.message);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    },
-    [productsData]
-  );
-  console.log(productsData);
   const handleSelect = (e) => {
-    const filteValue = e.target.value;
-    setDistance(filteValue);
+    // console.log(e.target.value);
+    // setDistance(e.target.value);
+    setProductsData(response);
+    const value = e.target.value;
+    const selectedProducts = productsData.filter(
+      (item) => value >= item.distance
+    );
+    setProductsData(selectedProducts);
   };
 
-  const handleSearch = (e) => {
-    const searchTerm = e.target.value;
-    const searchedProducts = productsData.filter((item) =>
-      item.productName.toLowerCase().includes(searchTerm.toLowerCase())
+  const handleZipcode = () => {
+    setProductsData(response);
+    const value = zipcodeRef.current.value;
+    // setZipcode(value);
+    // console.log(value);
+    const products = productsData.filter((item) => item.zipcode === value);
+    setProductsData(products);
+  };
+
+  const handleSearch = () => {
+    const searchTerm = searchRef.current.value;
+    if (!searchTerm) {
+      setProductsData(response);
+      return;
+    }
+
+    console.log(searchTerm);
+    const searchedProducts = productsData.filter(
+      (item) =>
+        item.productName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.productKeywords.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setProductsData(searchedProducts);
   };
 
+  const handleReset = (e) => {
+    const searchTerm = e.target.value;
+    if (!searchTerm) {
+      setProductsData(response);
+      return;
+    }
+  };
   return (
     <>
       <section>
@@ -52,19 +80,21 @@ const BuyerView = () => {
           <Row>
             <Col lg="3" md="3">
               <div className="form__widget">
-                <ZipcodeForm></ZipcodeForm>
+                <input type="text" placeholder="zipcode" ref={zipcodeRef} />
+                <button type="primary" onClick={handleZipcode}>
+                  submit
+                </button>
               </div>
             </Col>
             <Col lg="3" md="3">
               <div className="filter__widget">
-                <select onChange={handleSelect}>
-                  <option>Distance</option>
-                  <option value="5">5km</option>
-                  <option value="10">10km</option>
-                  <option value="20">20km</option>
-                  <option value="30">30km</option>
-                  <option value="40">40km</option>
-                  <option value="50"> &gt;50km</option>
+                <select onChange={handleSelect} placeholder="Choose Distance">
+                  <option value={5}>5km</option>
+                  <option value={10}>10km</option>
+                  <option value={20}>20km</option>
+                  <option value={30}>30km</option>
+                  <option value={40}>40km</option>
+                  <option value={1000}> &gt;50km</option>
                 </select>
               </div>
             </Col>
@@ -74,9 +104,10 @@ const BuyerView = () => {
                 <input
                   type="text"
                   placeholder="Search...."
-                  onChange={handleSearch}
+                  ref={searchRef}
+                  onChange={handleReset}
                 />
-                <span>
+                <span onClick={handleSearch}>
                   <i class="ri-search-line"></i>
                 </span>
               </div>
