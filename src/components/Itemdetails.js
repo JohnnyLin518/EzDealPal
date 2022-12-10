@@ -18,6 +18,7 @@ const ItemDetails = () => {
  const [productName, setProductName] = useState([]);
  const [description, setDescription] = useState([]);
  const [userEmail, setUserEmail] = useState([]);
+ const [pic, setPic] = useState([]);
  const id = useMemo(async () => {
   // const path = location.pathname;
   // const arr = path.split("/");
@@ -26,12 +27,13 @@ const ItemDetails = () => {
  },[]);
 
  useEffect(() => {
-  getItemDetails(10)
+  getItemDetails(13)
       .then(function (data) {
         const items = data;
         setProductName(items.productName)
         setDescription(items.productDescription)
         setUserEmail(items.userId)
+        setPic(items.url)
         console.log(items)
         // console.log(items.productDescription)
       })
@@ -63,7 +65,7 @@ const ItemDetails = () => {
       <div className="ItemDetails-Carousel">
        <Carousel autoplay>
         <div>
-             <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt="computer" width="500" height="300"/>
+             <img src={pic} alt="computer" width="500" height="300"/>
         </div>
         {/*<div>*/}
         {/*  <h3 style={contentStyle}>2</h3>*/}
